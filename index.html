@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Smart HTML App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Smart HTML App</h1>
+            <div class="theme-switcher">
+                <button id="themeToggle">Toggle Dark Mode</button>
+                <div id="liveClock" class="clock"></div>
+            </div>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Geolocation</h2>
+                <div id="locationInfo">
+                    <p>Click the button to get your location</p>
+                    <button id="getLocationBtn">Get My Location</button>
+                    <div id="locationResult"></div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Drag & Drop</h2>
+                <div class="drag-drop-container">
+                    <div class="drag-items">
+                        <img src="assets/image1.jpg" draggable="true" class="draggable" id="drag1">
+                        <img src="assets/image2.jpg" draggable="true" class="draggable" id="drag2">
+                        <img src="assets/image3.jpg" draggable="true" class="draggable" id="drag3">
+                    </div>
+                    <div class="drop-zone" id="dropZone">
+                        <p>Drop images here</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>User Preferences</h2>
+                <div class="storage-container">
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName">
+                    <button id="saveNameBtn">Save Name</button>
+                    <div id="savedName"></div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Background Processing</h2>
+                <div class="worker-container">
+                    <label for="workerInput">Enter a number to calculate its square:</label>
+                    <input type="number" id="workerInput">
+                    <button id="calculateBtn">Calculate</button>
+                    <div id="workerResult"></div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Live Updates</h2>
+                <div class="sse-container">
+                    <button id="startSSEBtn">Start Live Updates</button>
+                    <button id="stopSSEBtn" disabled>Stop Live Updates</button>
+                    <div id="sseMessages"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
